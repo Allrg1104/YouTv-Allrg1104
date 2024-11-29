@@ -30,7 +30,7 @@ function AdminHome({user}){
 
     useEffect(()=>{
 
-        fetch(`https://parcial2back.vercel.app/v1/signos/traer/${valor}`, {
+        fetch(`http://localhost:4000/v1/signos/traer/${valor}`, {
             method: 'GET',
             headers: {"Content-Type": "application/json"},
             // body: JSON.stringify(null)

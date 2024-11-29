@@ -197,6 +197,6 @@ module.exports = {
     registroCredenciales,
     registarAdmin, 
     Subirvideo,
-    upload,
+    //upload,
     videos,
 }
