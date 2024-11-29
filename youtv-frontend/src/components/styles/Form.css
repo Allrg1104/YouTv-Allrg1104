@@ -14,14 +14,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #111827;
+  background-color: #0f172a;
   color: #ffffff;
   padding: 1rem;
 }
 
-.login-box {
+.login-content {
+  display: flex;
   width: 100%;
-  max-width: 28rem;
+  max-width: 1000px;
+  background-color: #1e3a8a;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-container {
+  flex: 1;
+  padding: 2rem;
+}
+
+.login-image-container {
+  flex: 1;
+  display: none;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Estilos del encabezado */
@@ -32,22 +53,23 @@ body {
 
 .logo {
   margin: 0 auto;
-  height: 3rem;
-  width: 3rem;
-  color: #ef4444;
+  height: 4rem;
+  width: 4rem;
+  color: #3b82f6;
 }
 
 .login-title {
   margin-top: 1.5rem;
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: bold;
   letter-spacing: -0.025em;
+  color: #60a5fa;
 }
 
 .login-subtitle {
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: #93c5fd;
 }
 
 /* Estilos del formulario */
@@ -63,25 +85,25 @@ body {
   appearance: none;
   border-radius: 0.375rem;
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #374151;
-  background-color: #1f2937;
+  padding: 0.75rem 1rem;
+  border: 1px solid #2563eb;
+  background-color: #1e40af;
   color: #ffffff;
   font-size: 0.875rem;
 }
 
 .form-input:focus {
   outline: none;
-  box-shadow: 2px solid #ef4444;
-  border-color: #ef4444;
+  box-shadow: 0 0 0 2px #3b82f6;
+  border-color: #3b82f6;
 }
 
 .form-input::placeholder {
-  color: #6b7280;
+  color: #60a5fa;
 }
 
 .error-message {
-  color: #ef4444;
+  color: #f87171;
   font-size: 0.875rem;
   text-align: center;
   margin-top: 0.5rem;
@@ -92,31 +114,33 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 0.375rem;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .btn-primary {
-  background-color: #dc2626;
+  background-color: #3b82f6;
   color: #ffffff;
   width: 100%;
 }
 
 .btn-primary:hover {
-  background-color: #b91c1c;
+  background-color: #2563eb;
 }
 
 .btn-ghost {
   background-color: transparent;
-  color: #9ca3af;
+  color: #93c5fd;
+  border: 1px solid #3b82f6;
 }
 
 .btn-ghost:hover {
+  background-color: #1e40af;
   color: #ffffff;
 }
 
@@ -124,13 +148,13 @@ body {
 .additional-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Iconos */
 .icon {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   margin-right: 0.5rem;
 }
 
@@ -147,122 +171,10 @@ body {
   border-width: 0;
 }
 
+/* Media queries para responsividad */
+@media (min-width: 768px) {
+  .login-image-container {
+    display: block;
+  }
+}
 
-/* 
-#form1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-
-  #txtBienvenida {
-    color: #4a90e2;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .txt {
-    color: #333;
-    margin: 10px 0 5px;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-
-  .entry {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-  
-  .entry:focus {
-    border-color: #4a90e2;
-    outline: none;
-  }
-  
-
-  #btnEnviar {
-    width: 100%;
-    padding: 10px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  
-  #btnEnviar:hover {
-    background-color: #357ab8;
-  }
-  
-
-  button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-
-  #texto {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  #texto:hover {
-    text-decoration: underline;
-  }
-  
-
-  @media (max-width: 600px) {
-    #form1 {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    .txt {
-      font-size: 14px;
-    }
-  
-    .entry {
-      padding: 8px;
-      font-size: 14px;
-    }
-  
-    #btnEnviar, button {
-      padding: 8px;
-      font-size: 14px;
-    }
-  
-    #txtBienvenida {
-      font-size: 18px;
-    }
-  }*/
-  
