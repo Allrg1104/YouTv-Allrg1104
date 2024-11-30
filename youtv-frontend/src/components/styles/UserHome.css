@@ -1,13 +1,11 @@
 /* Estilos generales */
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #0f172a;
-    color: #ffffff;
+    background-color: #e0f2fe;
+    color: #0f172a;
 }
 
 .user-home-container {
@@ -18,18 +16,20 @@ body {
 
 /* Estilos del encabezado */
 .app-header {
-    background-color: #1e3a8a;
+    background-color: #0369a1;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .app-header h1 {
     margin: 0;
-    font-size: 1.5rem;
-    color: #3b82f6;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 /* Estilos del contenido principal */
@@ -43,24 +43,37 @@ body {
 
 /* Estilos de la sección de subida */
 .upload-section {
-    background-color: #1e3a8a;
-    border-radius: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
 }
 
 .upload-section h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    color: #60a5fa;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #1e40af;
+    font-weight: 600;
 }
 
 .upload-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .form-group {
@@ -70,17 +83,20 @@ body {
 
 .file-input-label {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
     color: #ffffff;
-    border-radius: 0.375rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
     text-align: center;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.5);
 }
 
 .file-input-label:hover {
-    background-color: #1d4ed8;
+    background-color: #2563eb;
+    transform: translateY(-2px);
 }
 
 .file-input {
@@ -88,94 +104,118 @@ body {
 }
 
 .form-input {
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    border: 1px solid #2563eb;
-    background-color: #1e40af;
-    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #bfdbfe;
+    background-color: #f0f9ff;
+    color: #1e40af;
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .form-input:focus {
     outline: none;
     border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
 .message {
     margin-top: 1rem;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    background-color: #1e40af;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #dbeafe;
     text-align: center;
+    font-weight: 500;
+    color: #1e40af;
 }
 
 /* Estilos de la sección de videos */
 .videos-section {
-    background-color: #1e3a8a;
-    border-radius: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.videos-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
 }
 
 .videos-section h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    color: #60a5fa;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #1e40af;
+    font-weight: 600;
 }
 
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .video-item {
-    background-color: #1e40af;
-    border-radius: 0.5rem;
+    background-color: #f0f9ff;
+    border-radius: 0.75rem;
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .video-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .video-item video {
     width: 100%;
     height: auto;
     display: block;
+    border-bottom: 2px solid #bfdbfe;
 }
 
 .video-title {
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0;
-    font-size: 0.875rem;
+    font-size: 1rem;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #bfdbfe;
+    color: #1e40af;
+    font-weight: 500;
 }
 
 .no-videos {
     text-align: center;
-    color: #93c5fd;
-    padding: 2rem;
-    background-color: #1e40af;
-    border-radius: 0.5rem;
+    color: #64748b;
+    padding: 3rem 2rem;
+    background-color: #f0f9ff;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
 }
 
 /* Estilos de los botones */
 .btn {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn:active {
@@ -185,25 +225,29 @@ body {
 .btn-primary {
     background-color: #3b82f6;
     color: #ffffff;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.5);
 }
 
 .btn-primary:hover {
     background-color: #2563eb;
+    transform: translateY(-2px);
 }
 
 .btn-primary:disabled {
-    background-color: #60a5fa;
+    background-color: #93c5fd;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
 .btn-ghost {
     background-color: transparent;
-    color: #93c5fd;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
 }
 
 .btn-ghost:hover {
     color: #ffffff;
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: #3b82f6;
 }
 
 /* Responsive */
@@ -214,7 +258,7 @@ body {
 
     .upload-section,
     .videos-section {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .video-grid {
@@ -225,6 +269,11 @@ body {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding: 1.5rem;
+    }
+
+    .app-header h1 {
+        font-size: 1.75rem;
     }
 }
 
@@ -234,11 +283,17 @@ body {
     }
 
     .upload-form {
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .btn {
         width: 100%;
     }
+
+    .file-input-label,
+    .form-input {
+        font-size: 0.875rem;
+    }
 }
+
 

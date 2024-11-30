@@ -43,7 +43,7 @@ function Form({ callback, setiduser }) {
       <div className="login-content">
         <div className="login-form-container">
           <div className="login-header">
-          <img src="/publi/youtv.png" alt="Logo YouTv" className="logo" />
+          <img src="/youtv.png" alt="Logo YouTv" className="logo" />
             <h2 className="login-title">YouTv</h2>
             <p className="login-subtitle">Inicia sesión en tu cuenta</p>
           </div>
@@ -112,7 +112,7 @@ function Form({ callback, setiduser }) {
           </div>
         </div>
         <div className="login-image-container">
-          <img src="/placeholder.svg?height=600&width=400" alt="YouTv" className="login-image" />
+        <img src="/youtv.png" alt="Logo YouTv" className="logo" />
         </div>
       </div>
     </div>
